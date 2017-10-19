@@ -25,4 +25,9 @@ namespace :db do
   task :seed do
     require_relative './db/seeds.rb'
   end
+
+  desc 'opens into a console with dummy data'
+  task :console => environment do
+    Pry.start
+  end
 end
